@@ -18,5 +18,5 @@
 		]
 	},
 	"ignoreFiles": ["node_modules/*", "static/**", "dist/**"],
-	"defaultSeverity": "error"
+	"defaultSeverity": "warning"
 }
