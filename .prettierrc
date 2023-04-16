@@ -8,5 +8,5 @@
 	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }],
 	"svelteSortOrder": "options-scripts-styles-markup",
 	"svelteStrictMode": true,
-	"svelteAllowShorthand": true,
+	"svelteAllowShorthand": true
 }

@@ -50,27 +50,25 @@ npm i -D carbon-components
 - Add and commit the YAML file to your repository.
 - GitHub will automatically run your workflow when the specified events occur.
 
-For an example of github workflow see the `src/.github/workflows/node.js.yml` file in this repo. More  about Github actions on https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
+For an example of github workflow see the `src/.github/workflows/node.js.yml` file in this repo. More about Github actions on https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 ## Set up Git hooks
 
-Git hooks are scripts that run automatically when certain events occur in your Git workflow, such as committing or pushing changes. These are useful for linting files and running tests. 
+Git hooks are scripts that run automatically when certain events occur in your Git workflow, such as committing or pushing changes. These are useful for linting files and running tests.
 
 Running git hooks against whole codebase is slow. Currently the repo implemets linting of files on staging only. Linting for staged files is setup using [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) packages.
 
 ```bash
 # install Husky and lint-staged as a dev dependency
 npm i -D husky lint-staged
+# enable Git hooks
+npx husky install
 
 # packages for linting js/ts & html files are already installed by SvelteKit
 # (eslint and prettier)
 
 # install packages for linting styles
 npm -i D stylelint stylelint-config-carbon stylelint-config-html stylelint-config-prettier-scss
-
-# enable Git hooks
-npx husky install
 
 ```
 
@@ -84,7 +82,7 @@ Add a `lint-staged` configuration to the `package.json` file.
   }
 ```
 
-Create a new `.stylelintrc.json` configuration file in your repo. See `.stylelintrc.json` in this repo for useful stylelint rules. 
+Create a new `.stylelintrc.json` configuration file in your repo. See `.stylelintrc.json` in this repo for useful stylelint rules. Commit the file to your repo.
 
 Add a new task to the the `package.json` file.
 
@@ -92,7 +90,7 @@ Add a new task to the the `package.json` file.
   "prepare": "svelte-kit sync && husky install"
 ```
 
-Add a pre-commit hook for running linting for staged files. Commit this
+Add a pre-commit hook for running linting for staged files. Commit the new file `.husky/pre-commit` created to your repo.
 
 ```bash
 npx husky add .husky/pre-commit 'npx lint-staged'

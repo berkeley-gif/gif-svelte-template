@@ -1,5 +1,5 @@
 <script>
-    import "../styles/main.scss";
+	import "../styles/main.scss";
 </script>
 
 <h1>Welcome to the GIF SvelteKit Template Repo</h1>
