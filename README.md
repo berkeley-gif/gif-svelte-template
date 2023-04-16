@@ -6,7 +6,7 @@ This repo serves as a reference for setting up new GIF projects using Svelte, [S
 
 **Note:** It's suggested that you follow the steps provided below to initiate a new project instead of duplicating this repository. This will allow you to gain a better understanding of how everything is connected.
 
-### Check your Node version
+## Check your Node version
 
 This project uses Node 16 and above. Run the following command before installing or running your development environment:
 
@@ -123,3 +123,8 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+
+## Credits
+
+Best practices settings taken from https://github.com/berkeley-gif/cal-adapt-svelte-components and https://github.com/berkeley-gif/caladapt-website-2021 developed by Chris Hendricks.
