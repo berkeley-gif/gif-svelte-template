@@ -1,7 +1,16 @@
 <script>
-	import "../styles/main.scss";
-</script>
+    import { Row, Column } from "carbon-components-svelte";
+  </script>
 
-<h1>Welcome to the GIF SvelteKit Template Repo</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<p>Built with SvelteKit and Carbon Svelte Components</p>
+ 
+<Row style="margin-bottom: var(--cds-layout-04)">
+    <Column>
+        <h1>Welcome to the GIF SvelteKit Template</h1>
+        <p>Built with SvelteKit and Carbon Svelte Components</p>
+    </Column>
+</Row>
+ 
+
+
+
+
