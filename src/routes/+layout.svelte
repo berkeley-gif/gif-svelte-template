@@ -21,6 +21,7 @@
 	aria-label="Navigation"
 	href="{'/'}"
 	expandedByDefault="{true}"
+	platformName="GIF SvelteKit Template"
 	bind:isSideNavOpen="{isSideNavOpen}"
   >
 	<svelte:fragment slot="skip-to-content">
@@ -37,9 +38,9 @@
 		<HeaderPanelLinks>
 		  <HeaderPanelDivider>GIF portfolio</HeaderPanelDivider>
 		  <HeaderPanelLink
-			href="https://github.com/carbon-design-system/carbon-icons-svelte"
+			href="https://github.com/berkeley-gif/cal-adapt-svelte-components"
 		  >
-			Svelte starter template for GIF projects
+			Cal-Adapt Svelte Component Library
 		  </HeaderPanelLink>
 		  <HeaderPanelLink
 			href="https://github.com/berkeley-gif/caladapt-website-2021"
@@ -47,6 +48,12 @@
 			Cal-Adapt 2.0 using Sapper and Svelte
 		  </HeaderPanelLink>
 		  <HeaderPanelDivider>Resources</HeaderPanelDivider>
+		  <HeaderPanelLink href="https://carbon-components-svelte.onrender.com/">
+			Carbon Components Svelte
+		  </HeaderPanelLink>
+		  <HeaderPanelLink href="https://charts.carbondesignsystem.com/svelte/?path=/story/intro--welcome">
+			Carbon Charts Svelte
+		  </HeaderPanelLink>
 		  <HeaderPanelLink href="https://www.carbondesignsystem.com/">
 			Carbon Design System
 		  </HeaderPanelLink>
