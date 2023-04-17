@@ -161,5 +161,6 @@ You can preview the production build with `npm run preview`.
 
 
 ## Credits
-
-Best practices settings taken from https://github.com/berkeley-gif/cal-adapt-svelte-components and https://github.com/berkeley-gif/caladapt-website-2021 developed by Chris Hendricks.
+- Template created using [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte) by @cohenlea
+- Settings for Github workflows and actions taken from https://github.com/berkeley-gif/cal-adapt-svelte-components and https://github.com/berkeley-gif/caladapt-website-2021 developed by @clhenrick.
+- Documentation on theming Carbon Svelte Components and setting up a new GIF SvelteKit project added by @mukhtyar
