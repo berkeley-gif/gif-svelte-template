@@ -57,6 +57,9 @@
 		  <HeaderPanelLink href="https://www.carbondesignsystem.com/">
 			Carbon Design System
 		  </HeaderPanelLink>
+		  <HeaderPanelLink href="https://carbondesignsystem.com/data-visualization/getting-started/">
+			Carbon Data Visualization
+		  </HeaderPanelLink>
 		  <HeaderPanelLink href="https://www.ibm.com/design/language/">
 			IBM Design Language
 		  </HeaderPanelLink>
