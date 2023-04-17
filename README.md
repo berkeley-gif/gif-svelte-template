@@ -24,11 +24,14 @@ npm create svelte@latest
 
 # create a new project in my-app
 npm create svelte@latest my-app
+
+# install packages listed with SvelteKit
+npm install
 ```
 
-## Install packages reccomended by SvelteKit and packages specific to the GIF stack
+## Install packages specific to the GIF stack
 
-Once you've created a project and installed dependencies with `npm install` install the following packages specific to the GIF stack.
+Once you've created a project and installed the SvelteKit dependencies install the following packages specific to the GIF stack.
 
 ```bash
 npm i -D sass
@@ -42,7 +45,10 @@ npm i -D carbon-icons-svelte
 # see the Styles for more details
 npm i -D carbon-components
 
-# charts
+# collection of simple and complex charts created by the
+# Carbon Design team
+# https://carbondesignsystem.com/data-visualization/getting-started/
+# https://charts.carbondesignsystem.com/svelte/?path=/story/intro--welcome
 npm i -D @carbon/charts-svelte
 ```
 
