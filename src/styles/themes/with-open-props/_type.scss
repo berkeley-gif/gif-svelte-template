@@ -3,7 +3,18 @@
 
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300;400;&display=swap";
 @import "https://fonts.googleapis.com/css?family=Lora:600&display=swap";
-@import "https://unpkg.com/open-props";
+
+// The following import only brings CSS variables related to fonts from Open Props
+// Open Props CSS variables are emitted at the :where(html) selector level
+// Note: .root selector level has higher specificity than :where(html) selector level
+// (atleast that's how I understand it from the references below - SM)
+// References:
+// - https://developer.mozilla.org/en-US/docs/Web/CSS/:where
+// - https://developer.mozilla.org/en-US/docs/Web/CSS/:root
+@import "open-props/fonts";
+
+// For more Open Props modules see files in node_modules/open-props
+// or the list at  https://open-props.style/#overview
 
 // Font Variables
 $header-font-family: "Lora", serif;
@@ -15,7 +26,6 @@ $body-font-weight: 400;
 body {
   font-family: $body-font-family;
   font-weight: $body-font-weight;
-  background-color: var(--cyan-0);
 }
 
 .h1,
