@@ -20,6 +20,8 @@ $css--reset: true;
 $css--default-type: true;
 $css--plex: true;
 
+@use "sass:map";
+
 @import "carbon-components/scss/globals/scss/vendor/@carbon/themes/scss";
 @import "carbon-components/scss/globals/scss/component-tokens";
 @import "carbon-components/src/components/tag/tag";
@@ -41,16 +43,8 @@ $carbon--theme: map.merge($carbon--theme--g10, $carbon--theme--caladapt);
 @import "carbon-components/scss/globals/scss/_css--body";
 @import "carbon-components/scss/globals/grid/grid";
 
-// For the purposes of this library import only the component styles that are used
-@import "carbon-components/scss/components/search/search";
-@import "carbon-components/scss/components/button/button";
-@import "carbon-components/scss/components/text-input/text-input";
-@import "carbon-components/scss/components/combo-box/combo-box";
-@import "carbon-components/scss/components/select/select";
-@import "carbon-components/scss/components/ui-shell/ui-shell";
-
-// To import all component styles use the folllwing line
-//@import "carbon-components/scss/globals/scss/styles";
+// Import styles for all Carbon components
+@import "carbon-components/scss/globals/scss/styles";
 
 // Generate CSS variables
 :root {
