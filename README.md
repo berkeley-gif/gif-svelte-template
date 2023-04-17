@@ -1,10 +1,14 @@
 # GIF Svelte Template
 
-This repo serves as a reference for setting up new GIF projects using Svelte, [SvelteKit](https://kit.svelte.dev/) and [Carbon Components Svelte](https://carbon-components-svelte.onrender.com/). The repo includes best practices for linting styles, github workflows and git hooks. It's been tested with SvelteKit version 1.5.0, svelte version 3.54, vite version 4.2.0 and node version 18.
+This repo serves as a reference for setting up new GIF projects using [SvelteKit](https://kit.svelte.dev/) with 2 different Svelete component libraries:
+- [Carbon Components Svelte](https://carbon-components-svelte.onrender.com/)
+- [Svelte Material UI](https://sveltematerialui.com/). 
 
-**Note:** This template should be updated as the tooling and best practicies evolve.
+The repo includes best practices for linting styles, github workflows and git hooks. It's been tested with SvelteKit version 1.5.0, svelte version 3.54, vite version 4.2.0 and node version 18.
 
-**Note:** It's suggested that you follow the steps provided below to initiate a new project instead of duplicating this repository. This will allow you to gain a better understanding of how everything is connected.
+**Note: This template should be updated as the tooling and best practicies evolve.**
+
+**Note: It's suggested that you follow the steps provided below to initiate a new project instead of duplicating this repository. This will allow you to gain a better understanding of how everything is connected.**
 
 ## Check your Node version
 
@@ -14,7 +18,7 @@ This project uses Node 16 and above. Run the following command before installing
 nvm use 16
 ```
 
-## Create a new GIF project
+## Create a new GIF SvelteKit project
 
 The best way to create a new SvelteKit project is by following the instructions on [Creating a Project](https://kit.svelte.dev/docs/creating-a-project) in [SvelteKit documentation](https://kit.svelte.dev/docs/introduction). That way you get the latest npm packages. Everything you need to build a Svelte project is powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
@@ -25,31 +29,47 @@ npm create svelte@latest
 # create a new project in my-app
 npm create svelte@latest my-app
 
-# install packages listed with SvelteKit
+# install packages listed by SvelteKit
 npm install
+
+# install sass
+npm i -D sass
 ```
 
-## Install packages specific to the GIF stack
+## Using component libraries
 
-Once you've created a project and installed the SvelteKit dependencies install the following packages specific to the GIF stack.
+### Using Carbon Components Svelte
+
+This repo contains a basic example of using [Carbon Components Svelte](https://carbon-components-svelte.onrender.com/). These components use the [Carbon Design System v11](https://www.carbondesignsystem.com/) developed by IBM. The Cal-Adapt 2.0 website is developed using an older version of the Carbon Components Svelte that use Carbon Design System v10.
+
 
 ```bash
-npm i -D sass
 npm i -D carbon-components-svelte
-npm i -D carbon-icons-svelte
 
-# the following packags are optional
+# OPTIONAL PACKAGES
 
-# carbon-component is required if you are going
-# to style the Svelte carbon components with SCSS
-# see the Styles for more details
+# carbon-components is required if you are going
+# to style the carbon components with SCSS
 npm i -D carbon-components
 
-# collection of simple and complex charts created by the
-# Carbon Design team
+# icons
+npm i -D carbon-icons-svelte
+
+# @carbon/charts-svelte  is a collection of simple and complex charts
 # https://carbondesignsystem.com/data-visualization/getting-started/
 # https://charts.carbondesignsystem.com/svelte/?path=/story/intro--welcome
 npm i -D @carbon/charts-svelte
+```
+
+### Using Material UI Components for Svelte
+
+This repo contains a basic example of using the Svelte Material UI components. For more detailed instructions see the [Svelte Material UI](https://sveltematerialui.com/SVELTEKIT.md) documentation.
+
+```bash
+npm i -D @smui/button
+npm i -D @smui/card
+
+npm i -D smui-theme
 ```
 
 ## Setup Github workflows
