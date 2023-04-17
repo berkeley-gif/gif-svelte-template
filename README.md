@@ -35,11 +35,15 @@ npm i -D sass
 npm i -D carbon-components-svelte
 npm i -D carbon-icons-svelte
 
-# the following package is optional, its required if you are going
+# the following packags are optional
+
+# carbon-component is required if you are going
 # to style the Svelte carbon components with SCSS
 # see the Styles for more details
 npm i -D carbon-components
 
+# charts
+npm i -D @carbon/charts-svelte
 ```
 
 ## Setup Github workflows
@@ -68,7 +72,7 @@ npx husky install
 # (eslint and prettier)
 
 # install packages for linting styles
-npm -i D stylelint stylelint-config-carbon stylelint-config-html stylelint-config-prettier-scss
+npm i -D stylelint stylelint-config-prettier-scss stylelint-config-html stylelint-config-carbon --force
 
 ```
 
@@ -94,6 +98,37 @@ Add a pre-commit hook for running linting for staged files. Commit the new file 
 
 ```bash
 npx husky add .husky/pre-commit 'npx lint-staged'
+
+```
+
+## Testing
+
+End to end tests are written using [Playwright]() and unit tests are writtin using [vitest]().
+
+```bash
+npm i -D vitest
+
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/svelte": "^3.2.2",
+    "@testing-library/user-event": "^14.4.3",
+```
+
+Create a new `.stylelintrc.json` configuration file in your repo. See `.stylelintrc.json` in this repo for useful stylelint rules. Commit the file to your repo.
+
+Add a new task to the the `package.json` file.
+
+```
+  "test:unit": "vitest"
+```
+
+```
+  test: {
+    include: ["src/**/*.{test,spec}.{js,ts}"],
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./tests/setup.ts",
+    types: ["vitest/globals"]
+  },
 ```
 
 ## Developing
