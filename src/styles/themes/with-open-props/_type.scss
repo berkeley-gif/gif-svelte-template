@@ -2,11 +2,11 @@
 @use "carbon-components/scss/globals/scss/spacing" as spc;
 
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300;400;&display=swap";
-@import "https://fonts.googleapis.com/css?family=Dancing+Script:600&display=swap";
+@import "https://fonts.googleapis.com/css?family=Lora:600&display=swap";
 @import "https://unpkg.com/open-props";
 
 // Font Variables
-$header-font-family: "Dancing Script", serif;
+$header-font-family: "Lora", serif;
 $header-font-weight: 600;
 
 $body-font-family: "Open Sans", sans-serif;
@@ -15,6 +15,7 @@ $body-font-weight: 400;
 body {
   font-family: $body-font-family;
   font-weight: $body-font-weight;
+  background-color: var(--cyan-0);
 }
 
 .h1,
