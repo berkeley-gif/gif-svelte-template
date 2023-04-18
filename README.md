@@ -1,8 +1,9 @@
 # GIF Svelte Template
 
 This repo serves as a reference for setting up new GIF projects using [SvelteKit](https://kit.svelte.dev/) with 2 different Svelete component libraries:
+
 - [Carbon Components Svelte](https://carbon-components-svelte.onrender.com/)
-- [Svelte Material UI](https://sveltematerialui.com/). 
+- [Svelte Material UI](https://sveltematerialui.com/).
 
 The repo includes best practices for linting styles, github workflows and git hooks. It's been tested with SvelteKit version 1.5.0, svelte version 3.54, vite version 4.2.0 and node version 18.
 
@@ -41,7 +42,6 @@ npm i -D sass
 ### Using Carbon Components Svelte
 
 This repo contains a basic example of using [Carbon Components Svelte](https://carbon-components-svelte.onrender.com/). These components use the [Carbon Design System v11](https://www.carbondesignsystem.com/) developed by IBM. The Cal-Adapt 2.0 website is developed using an older version of the Carbon Components Svelte that use Carbon Design System v10.
-
 
 ```bash
 npm i -D carbon-components-svelte
@@ -185,8 +185,8 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-
 ## Credits
+
 - Template created using [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte) by @cohenlea
 - Settings for Github workflows and actions taken from https://github.com/berkeley-gif/cal-adapt-svelte-components and https://github.com/berkeley-gif/caladapt-website-2021 developed by @clhenrick.
 - Documentation on theming Carbon Svelte Components and setting up a new GIF SvelteKit project added by @mukhtyar

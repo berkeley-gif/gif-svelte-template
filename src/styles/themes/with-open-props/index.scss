@@ -16,7 +16,7 @@
 $prefix: "cds";
 
 :root {
-  @each $key, $value in meta.module-variables(variables) {
-    --#{$prefix}-#{$key}: #{$value};
-  }
+	@each $key, $value in meta.module-variables(variables) {
+		--#{$prefix}-#{$key}: #{$value};
+	}
 }

@@ -92,8 +92,7 @@ $hover-field: #e5e5e5;
 
 // Box shadow
 $box-shadow: 0 0.125rem 0.25rem rgba($black, 0.075);
-$box-shadow-lift: 0 1rem 2.5rem fade-out($black, 0.9),
-  0 0.5rem 1rem -0.75rem fade-out($black, 0.9);
+$box-shadow-lift: 0 1rem 2.5rem fade-out($black, 0.9), 0 0.5rem 1rem -0.75rem fade-out($black, 0.9);
 
 // Border radius
 $border-radius: 0.175rem;

@@ -13,7 +13,7 @@
 @use "sass:meta";
 
 :root {
-  @each $key, $value in meta.module-variables(variables) {
-    --#{$key}: #{$value};
-  }
+	@each $key, $value in meta.module-variables(variables) {
+		--#{$key}: #{$value};
+	}
 }

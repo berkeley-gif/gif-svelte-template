@@ -7,9 +7,9 @@
 // Carbon v11 style integration - https://github.com/carbon-design-system/carbon-components-svelte/issues/1629
 
 $feature-flags: (
-  ui-shell: true,
-  grid-columns-16: true,
-  enable-css-custom-properties: true
+	ui-shell: true,
+	grid-columns-16: true,
+	enable-css-custom-properties: true
 );
 
 $css--font-face: true;
@@ -48,10 +48,10 @@ $carbon--theme: map.merge($carbon--theme--g10, $carbon--theme--caladapt);
 
 // Generate CSS variables
 :root {
-  @include carbon--theme($carbon--theme, true) {
-    @include emit-component-tokens($tag-colors);
-    @include emit-component-tokens($notification-colors);
-  }
+	@include carbon--theme($carbon--theme, true) {
+		@include emit-component-tokens($tag-colors);
+		@include emit-component-tokens($notification-colors);
+	}
 }
 
 // Import other custom theme styles e.g. alternate font families, typography
