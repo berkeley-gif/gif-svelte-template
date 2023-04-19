@@ -89,41 +89,52 @@ Git hooks are scripts that run automatically when certain events occur in your G
 Running git hooks against whole codebase is slow. Currently the repo implemets linting of files on staging only. Linting for staged files is setup using [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) packages.
 
 ```bash
-# install Husky and lint-staged as a dev dependency
-npm i -D husky lint-staged
-# enable Git hooks
-npx husky install
+# This will install husky and lint-staged, then add a configuration to the project’s
+# package.json that will automatically format supported files in a pre-commit hook.
+# see https://prettier.io/docs/en/precommit.html
+npx mrm@2 lint-staged
 
-# packages for linting js/ts & html files are already installed by SvelteKit
-# (eslint and prettier)
+# packages for linting & formatting js/ts & html files (eslint and prettier)
+# are already installed by SvelteKit
 
 # install packages for linting styles
-npm i -D stylelint stylelint-config-prettier-scss stylelint-config-html stylelint-config-carbon --force
+npm i -D stylelint stylelint-config-prettier-scss stylelint-config-html stylelint-config-carbon
+
+# you might need to use --force with the comman above if the stylelint dependencies between
+# packages are out of sync
 
 ```
 
-Add a `lint-staged` configuration to the `package.json` file.
+Update the `lint` and `format` scripts & add a new `lint_style` script in `package.json` file:
+
+```
+		"lint": "prettier --plugin-search-dir . --check . && eslint . --cache --fix",
+		"lint:styles": "stylelint \"**/*.{css,scss,sass,svelte}\" --cache --ignore-path .gitignore --fix --allow-empty-input",
+		"format": "prettier --plugin-search-dir . --write .",
+```
+
+Update the `lint-staged` configuration in the `package.json` file to run the scripts defined above:
 
 ```
   "lint-staged": {
-    "*.{js,ts,svelte}": "eslint --cache",
-    "*.{css,scss,svelte}": "stylelint --allow-empty-input",
-    "*.{js,svelte,jsx,ts,tsx,md,html,css,scss}": "prettier --write"
+		"*.{js,ts,svelte}": "npm run lint",
+		"*.{css,scss,svelte}": "npm run lint:styles",
+		"*.{js,svelte,jsx,ts,tsx,md,html,css,scss}": "npm run format"
   }
 ```
 
-Create a new `.stylelintrc.json` configuration file in your repo. See `.stylelintrc.json` in this repo for useful stylelint rules. Commit the file to your repo.
+Create a new `.stylelintrc.json` configuration file in your repo. See `.stylelintrc.json` in this repo for useful stylelint rules.
 
-Add a new task to the the `package.json` file.
+Update the `prepare` task in `package.json` to.
 
 ```
   "prepare": "svelte-kit sync && husky install"
 ```
 
-Add a pre-commit hook for running linting for staged files. Commit the new file `.husky/pre-commit` created to your repo.
+Sometimes if you add extra spaces or change a bracket position and run lint-staged and try to commit the changed file, git complains about an empty git commit (because technically there's no change in the codebase). To allow empty commits, update the pre-commit hook for running lint-staged `.husky/pre-commit` to:
 
 ```bash
-npx husky add .husky/pre-commit 'npx lint-staged'
+npx lint-staged --allow-empty
 
 ```
 
