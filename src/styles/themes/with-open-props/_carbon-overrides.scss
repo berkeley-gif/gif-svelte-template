@@ -1,3 +1,5 @@
+@use "./variables" as var;
+
 /* This prevents layout shift */
 .bx--body--with-modal-open {
 	overflow-y: scroll;
@@ -37,4 +39,9 @@
 			padding: 0.25rem 1rem 0.25rem 0.5rem;
 		}
 	}
+}
+
+/* Chart headings */
+.cds--cc--title p.title {
+	//font-family: var.$body-font-family;
 }

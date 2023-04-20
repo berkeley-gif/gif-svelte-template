@@ -1,9 +1,6 @@
 @use "carbon-components/scss/globals/scss/spacing" as spc;
-@import "open-props/colors";
-
-// Carbon theme tokens for custom theme
-$interactive-01: var(--blue-8);
-$interactive-02: var(--pink-7);
+@import "https://fonts.googleapis.com/css2?family=Lora&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap";
 
 // Border radius
 $border-radius: 0.175rem;
@@ -11,6 +8,19 @@ $border-radius: 0.175rem;
 // Text
 $p-default-max-width: 75ch;
 $p-lead-default-max-width: 55ch;
+
+// Font
+$header-font-family: Inter, IBM Plex Sans, ui-sans-serif, system-ui, -apple-system, Helvetica Neue,
+	Arial, sans-serif;
+$pageheader-font-weight: 800;
+$header-font-weight: 600;
+
+$body-font-family: Inter, IBM Plex Sans, ui-sans-serif, system-ui, -apple-system, Helvetica Neue,
+	Arial, sans-serif;
+$body-font-weight: 400;
+
+$quotation-font-family: Lora, "IBM Plex Serif", system-ui, -apple-system, BlinkMacSystemFont,
+	".SFNSText-Regular", serif;
 
 // Carbon design system spacing
 // number corresponds to equivalent pixel units in rem

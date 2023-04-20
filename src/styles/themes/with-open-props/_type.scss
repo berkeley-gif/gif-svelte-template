@@ -1,10 +1,7 @@
 @use "./variables" as var;
 @use "carbon-components/scss/globals/scss/spacing" as spc;
 
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300;400;&display=swap";
-@import "https://fonts.googleapis.com/css?family=Lora:600&display=swap";
-
-// The following import only brings CSS variables related to fonts from Open Props
+// The following import brings CSS variables related to fonts from Open Props
 // Open Props CSS variables are emitted at the :where(html) selector level
 // Note: .root selector level has higher specificity than :where(html) selector level
 // (atleast that's how I understand it from the references below - SM)
@@ -15,26 +12,18 @@
 
 // For more Open Props modules see files in node_modules/open-props
 // or the list at  https://open-props.style/#overview
-
-// Font Variables
-$header-font-family: "Lora", serif;
-$header-font-weight: 600;
-
-$body-font-family: "Open Sans", sans-serif;
-$body-font-weight: 400;
-
 body {
-	font-family: $body-font-family;
-	font-weight: $body-font-weight;
+	font-family: var.$body-font-family;
+	font-weight: var.$body-font-weight;
 }
 
 .h1,
 h1 {
 	margin-top: spc.$spacing-lg;
 	margin-bottom: spc.$spacing-md;
-	font-family: $header-font-family;
+	font-family: var.$header-font-family;
 	font-size: var(--font-size-8);
-	font-weight: $header-font-weight;
+	font-weight: var.$pageheader-font-weight;
 	line-height: var(--font-lineheight-1);
 }
 
@@ -42,27 +31,27 @@ h1 {
 h2 {
 	margin-top: spc.$spacing-lg;
 	margin-bottom: spc.$spacing-md;
-	font-family: $header-font-family;
+	font-family: var.$header-font-family;
 	font-size: var(--font-size-7);
-	font-weight: $header-font-weight;
+	font-weight: var.$header-font-weight;
 }
 
 .h3,
 h3 {
 	margin-top: spc.$spacing-lg;
 	margin-bottom: spc.$spacing-md;
-	font-family: $header-font-family;
+	font-family: var.$header-font-family;
 	font-size: var(--font-size-6);
-	font-weight: $header-font-weight;
+	font-weight: var.$header-font-weight;
 }
 
 .h4,
 h4 {
 	margin-top: spc.$spacing-lg;
 	margin-bottom: spc.$spacing-md;
-	font-family: $header-font-family;
+	font-family: var.$header-font-family;
 	font-size: var(--font-size-5);
-	font-weight: $header-font-weight;
+	font-weight: var.$header-font-weight;
 }
 
 .h5,
@@ -72,14 +61,18 @@ h6 {
 	// h5 and h6 intentionally mimic one another
 	margin-top: spc.$spacing-lg;
 	margin-bottom: spc.$spacing-md;
-	font-family: $header-font-family;
+	font-family: var.$header-font-family;
 	font-size: var(--font-size-4);
-	font-weight: $header-font-weight;
+	font-weight: var.$header-font-weight;
 }
 
 p {
 	max-width: var.$p-default-max-width;
 	margin-bottom: spc.$spacing-md;
-	font-family: $body-font-family;
+	font-family: var.$body-font-family;
 	font-size: var(--font-size-3);
+}
+
+blockquote p {
+	font-family: var.$quotation-font-family;
 }

@@ -1,0 +1,10 @@
+@use "./variables" as var;
+@import "open-props/colors";
+
+// Carbon theme tokens for custom theme
+$interactive-01: var(--blue-8);
+$interactive-02: var(--pink-7);
+$quotation-01-font-family: var.$quotation-font-family;
+$quotation-02-font-family: var.$quotation-font-family;
+$fluid-quotation-01-font-family: var.$quotation-font-family;
+$fluid-quotation-02-font-family: var.$quotation-font-family;

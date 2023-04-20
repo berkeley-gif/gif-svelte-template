@@ -3,3 +3,12 @@
 body {
 	background-color: hsl(var(--blue-4-hsl) / 10%);
 }
+
+hr {
+	margin: 3rem 1rem 1rem;
+	color: hsl(var(--gray-1-hsl));
+}
+
+.quote {
+	padding: var(--cds-spacing-08);
+}
