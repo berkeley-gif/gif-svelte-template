@@ -105,21 +105,13 @@ npm i -D stylelint stylelint-config-prettier-scss stylelint-config-html stylelin
 
 ```
 
-Update the `lint` and `format` scripts & add a new `lint_style` script in `package.json` file:
-
-```
-		"lint": "prettier --plugin-search-dir . --check . && eslint . --cache --fix",
-		"lint:styles": "stylelint \"**/*.{css,scss,sass,svelte}\" --cache --ignore-path .gitignore --fix --allow-empty-input",
-		"format": "prettier --plugin-search-dir . --write .",
-```
-
-Update the `lint-staged` configuration in the `package.json` file to run the scripts defined above:
+Update the `lint-staged` configuration in the `package.json` file:
 
 ```
   "lint-staged": {
-		"*.{js,ts,svelte}": "npm run lint",
-		"*.{css,scss,svelte}": "npm run lint:styles",
-		"*.{js,svelte,jsx,ts,tsx,md,html,css,scss}": "npm run format"
+		"*.{js,ts,svelte}": "eslint --cache --fix",
+		"*.{css,scss,svelte}": "stylelint --fix --allow-empty-input",
+		"*.{js,svelte,jsx,ts,tsx,md,html,css,scss}": "prettier --write"
   }
 ```
 
