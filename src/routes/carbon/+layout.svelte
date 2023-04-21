@@ -9,9 +9,8 @@
 		Content
 	} from "carbon-components-svelte";
 	import LogoGithub from "carbon-icons-svelte/lib/UserAvatarFilledAlt.svelte";
-	import "../../styles/main.scss";
+	import "../../styles/_theme_with_carbon_css.scss";
 
-	let isOpen = false;
 	let isSideNavOpen = true;
 </script>
 
@@ -28,7 +27,6 @@
 
 	<HeaderNav>
 		<HeaderNavItem href="/material" text="Using Svelte Material UI" />
-		<HeaderNavItem href="/resources" text="Resources" />
 	</HeaderNav>
 
 	<HeaderUtilities>

@@ -1,7 +1,13 @@
 @import "open-props/colors-hsl";
 
 body {
-	background-color: hsl(var(--blue-4-hsl) / 10%);
+	background-color: var(--cds-ui-background);
+}
+
+:root[theme="white"] {
+	body {
+		background-color: hsl(var(--blue-5-hsl) / 15%);
+	}
 }
 
 hr {
