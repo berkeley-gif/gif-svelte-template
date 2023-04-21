@@ -12,6 +12,6 @@
 		<a href="/carbon">Using & Styling with Carbon Components Svelte</a>
 	</li>
 	<li>
-		<a href="/material">Using & Styling Svelte Material UI Components</a>
+		<a href="/material">Using Svelte Material UI Components</a>
 	</li>
 </ul>
