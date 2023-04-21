@@ -1,16 +1,25 @@
-// To learn more about theming carbon-components-svelte see issue:
-// Creating custom themes - https://github.com/carbon-design-system/carbon-components-svelte/issues/713
+// To learn more about theming carbon-components-svelte see:
+// https://github.com/carbon-design-system/carbon-components-svelte#styling
+// https://github.com/carbon-design-system/carbon-components-svelte/issues/713
 
-// The carbon-components-svelte library currently uses Carbon v10 styles
+// Note: The carbon-components-svelte library currently uses Carbon v10 styles
 // As the library is updated to use Carbon v11 styling, it might become
 // easier to theme. For more see issue:
-// Carbon v11 style integration - https://github.com/carbon-design-system/carbon-components-svelte/issues/1629
+// https://github.com/carbon-design-system/carbon-components-svelte/issues/1629
 
+// The Carbon Design System comes with five themes (2 light, 3 dark). You can use any of
+// these themes as the fallback theme for your project in two different ways:
+// 1. import the corresponding css file e.g to get the Gray 10 theme use:
+//    import "carbon-components-svelte/css/g10.css"
+// 2. import the all.css files which contains CSS vars for all themes (as shown in this example)
+//    add a theme="white" attribute to the html element if you want to use the white theme as the fallback theme
+
+// Once you have the base styles, you can overwrite any of them by adding new SCSS partials or
+// overrriding the CSS variables from the fallback theme.
+
+// The "all.css" file contains CSS variables for all Carbon themes
 @import "carbon-components-svelte/css/all.css";
 
-// Generate CSS variables
-
-// Import other custom theme styles e.g. alternate font families, typography
-// These files need to be imported after all the Carbon scss imports
-// Comment out this line if using a default Carbon theme
+// Import your custom theme styles e.g. alternate font families, typography
+// These files need to be imported after all the Carbon css imports
 @import "./themes/with-open-props";

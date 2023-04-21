@@ -1,10 +1,11 @@
-// To learn more about theming carbon-components-svelte see issue:
-// Creating custom themes - https://github.com/carbon-design-system/carbon-components-svelte/issues/713
+// To learn more about theming carbon-components-svelte see:
+// https://github.com/carbon-design-system/carbon-components-svelte#styling
+// https://github.com/carbon-design-system/carbon-components-svelte/issues/713
 
-// The carbon-components-svelte library currently uses Carbon v10 styles
+// Note: The carbon-components-svelte library currently uses Carbon v10 styles
 // As the library is updated to use Carbon v11 styling, it might become
 // easier to theme. For more see issue:
-// Carbon v11 style integration - https://github.com/carbon-design-system/carbon-components-svelte/issues/1629
+// https://github.com/carbon-design-system/carbon-components-svelte/issues/1629
 
 $feature-flags: (
 	ui-shell: true,
@@ -31,8 +32,11 @@ $css--plex: true;
 // Use full path to popover file
 @import "carbon-components-svelte/css/popover";
 
-// Override all or some of the carbon tokens in your custom theme's token file
-// Using light grey (g10) theme as the fallback theme
+// The Carbon Design System comes with five themes (2 light, 3 dark). You can use any of
+// these themes as the fallback theme for your project.
+// This example uses the light grey (g10) theme as the fallback theme.
+// The tokens from the Carbon g10 theme are overriden by tokens specified in your custom theme
+// e.g. $carbon--theme--caladapt scss map in the caladapt-rokens file
 @import "./themes/caladapt/carbon-tokens";
 $carbon--theme: map.merge($carbon--theme--g10, $carbon--theme--caladapt);
 @include carbon--theme();
@@ -54,7 +58,6 @@ $carbon--theme: map.merge($carbon--theme--g10, $carbon--theme--caladapt);
 	}
 }
 
-// Import other custom theme styles e.g. alternate font families, typography
+// Import your custom theme styles e.g. alternate font families, typography
 // These files need to be imported after all the Carbon scss imports
-// Comment out this line if using a default Carbon theme
 @import "./themes/caladapt";
