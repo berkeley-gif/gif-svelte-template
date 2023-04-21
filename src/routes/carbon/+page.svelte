@@ -16,7 +16,7 @@
 
 	let theme = "white";
 
-	function updateTheme(e) {
+	function updateFallbackTheme(e) {
 		if (!browser) return;
 		document.documentElement.setAttribute("theme", e.detail);
 	}
@@ -43,8 +43,8 @@
 				Theming below.
 			</p>
 			<RadioButtonGroup
-				on:change="{updateTheme}"
-				legendText="Switch between default Carbon themes"
+				on:change="{updateFallbackTheme}"
+				legendText="Use a different fallback Carbon themes"
 				selected="{theme}"
 			>
 				{#each ["white", "g10", "g80", "g90", "g100"] as value}
@@ -58,13 +58,13 @@
 		<Column>
 			<h2 class="h4">Sample buttons</h2>
 			<Row>
-				<Column sm="{1}" md="{2}">
+				<Column sm="{1}" md="{4}">
 					<div style="padding: var(--cds-spacing-05) 0">
 						<CodeSnippet type="inline" code="background-color: var(--cds-interactive-01)" />
 					</div>
 					<Button>Primary</Button>
 				</Column>
-				<Column sm="{1}" md="{2}">
+				<Column sm="{1}" md="{4}">
 					<div style="padding: var(--cds-spacing-05) 0">
 						<CodeSnippet type="inline" code="background-color: var(--cds-interactive-02)" />
 					</div>
