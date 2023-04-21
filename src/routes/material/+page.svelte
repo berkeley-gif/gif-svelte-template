@@ -67,4 +67,15 @@
 			</Body>
 		</DataTable>
 	</LayoutCell>
+	<LayoutCell>
+		<p>Back to:</p>
+		<ul>
+			<li>
+				<a href="/carbon">Using & Styling with Carbon Components Svelte</a>
+			</li>
+			<li>
+				<a href="/">Home</a>
+			</li>
+		</ul>
+	</LayoutCell>
 </LayoutGrid>
