@@ -5,7 +5,7 @@ This repo serves as a reference for setting up new GIF projects using [SvelteKit
 - [Carbon Components Svelte](https://carbon-components-svelte.onrender.com/)
 - [Svelte Material UI](https://sveltematerialui.com/).
 
-The repo includes best practices for linting styles, github workflows and git hooks. It's been tested with SvelteKit version 1.5.0, svelte version 3.54, vite version 4.2.0 and node version 18.
+The repo includes best practices for linting styles, github workflows and git hooks. It's been tested with SvelteKit version 1.5.0, svelte version 3.54, vite version 4.2.0 and node versions 16 and 18.
 
 **Note: This template should be updated as the tooling and best practicies evolve.**
 
